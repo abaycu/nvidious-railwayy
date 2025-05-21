@@ -1,0 +1,9 @@
+db:
+  dbname: railway
+  user: postgres
+  password: lDcCgIZCzxkmgVpzJJDUaeRRXlIkbtYW
+  host: postgres.railway.internal
+  port: 5432
+
+check_tables: true
+hmac_key: XjSgKp7YmU2bWa9QcFdE3VrNLtz4AoJBvxRiH68dPY
