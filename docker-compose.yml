@@ -1,9 +1,16 @@
-
 version: "3"
 services:
   invidious:
-    build: .
+    image: quay.io/invidious/invidious:latest
     ports:
       - "3000:3000"
-    volumes:
-      - ./config:/invidious/config
+    environment:
+      INVIDIOUS_CONFIG: |
+        db:
+          dbname: railway
+          user: postgres
+          password: lDcCgIZCzxkmgVpzJJDUaeRRXlIkbtYW
+          host: postgres.railway.internal
+          port: 5432
+        check_tables: true
+        hmac_key: "Tj7ZpQ4sMb2YwXnLUgRcKvhEo89N1V3aFAJxqDiKmt"
